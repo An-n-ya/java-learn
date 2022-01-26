@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>graph</title>
+        <script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>
+    </head>
+    <body>
+        <center id="messages_center">
+    
+        </center>
+        <script type="text/vnd.graphviz" id="view_div">graph g {0[label="A"];1[label="B"];2[label="C"];3[label="D"];4[label="E"];0--1[label="5"];0--3[label="6"];1--2[label="2"];1--4[label="3"];3--4[label="8"];}</script>   
+        <script type="text/javascript">
+            (function(){
+                    document.getElementById("messages_center").innerHTML=Viz(document.getElementById("view_div").innerHTML, "SVG");
+                })()
+        </script>
+</body>
+</html>
